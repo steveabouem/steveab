@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class Sidebar extends React.Component {
   render() {
     return(
-      <ul>
+      <ul id='sidebar'>
         <li>
           children
         </li>
