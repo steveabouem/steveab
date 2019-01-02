@@ -13,10 +13,11 @@ import {
 } from 'react-router-dom';
 
 class Routes extends Component {
+  links = ['about', 'skills', 'gallery', 'contact'];
   render() {
     return (
       <Switch>
-        <Sidebar />
+        <Sidebar links={this.links}/>
         <Route exact path='/' component={Landing} / >
         <Route exact path='/about' component={About} / >
         <Route exact path='/skills' component={Skills} / >
