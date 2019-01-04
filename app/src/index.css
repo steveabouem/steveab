@@ -1,7 +1,7 @@
 /* ===================GLOBAL=================== */
 
 * {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand', verdana, sans-serif;
   transition: all 0.4s;
   list-style: none;
 }
@@ -14,11 +14,16 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #08fdd8;
+}
+
 #sidebar {
   display: flex;
   flex-direction: column;
   position: absolute;
-  padding: 1%;
+  padding: 0;
   background: #181818;
   color: #c4e3ff;
   min-width: 10%;
@@ -28,8 +33,27 @@ body {
   margin: 0;
 }
 
+.sidebar-item {
+  margin: 10% auto;
+}
+
+.credentials {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  color: grey;
+  font-size: 0.8em;
+  opacity: 0.7;
+  text-align: center;
+}
+
 /* ===================EFFECTS=================== */
 
+a:hover {
+  color: white;
+  border-bottom: 1px solid #08fdd8;
+  content: "go";
+}
 
 /* ===================GLOBAL(MOBILE)=================== */
 
