@@ -1,10 +1,14 @@
 import React from 'react';
+import Sidebar from '../common/Sidebar';
 
 class Landing extends React.Component {
   render() {
     return (
       <div className='page-container'>
-        <h1>Landing</h1>
+        <Sidebar />
+        <div className='right-side'>
+          <h1>Welcome</h1>
+        </div>
       </div>
     )
   }

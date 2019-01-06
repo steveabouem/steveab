@@ -1,10 +1,14 @@
 import React from 'react';
+import Sidebar from '../common/Sidebar';
 
 class Skills extends React.Component {
   render() {
     return (
       <div className='page-container'>
-        <h1>Skills</h1>
+        <Sidebar />
+        <div className='right-side'>
+          <h1>Gallery</h1>
+        </div>
       </div>
     )
   }

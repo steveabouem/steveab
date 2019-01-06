@@ -24,6 +24,7 @@ a {
   flex-direction: column;
   position: absolute;
   padding: 0;
+  top: 0;
   background: #181818;
   color: #c4e3ff;
   min-width: 10%;
@@ -34,7 +35,27 @@ a {
 }
 
 .sidebar-item {
-  margin: 10% auto;
+  margin: 15% auto;
+}
+
+.sidebar-item img {
+  width: 100%;
+  background-blend-mode: overlay;
+  height: 100%;
+  background-color: #b5f6ff;
+  border-radius: 5px;
+  animation: shake 0.2s ease-out;
+}
+
+.page-container {
+  display: inline-block;
+}
+
+.right-side {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  animation: reveal 0.9s linear;
 }
 
 .credentials {
@@ -55,6 +76,27 @@ a:hover {
   content: "go";
 }
 
+@keyframes shake {
+  0% {
+    transform: translateY(2px);
+    width: 200%;
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+  
+}
+
+@keyframes reveal{
+  0% {
+    filter: opacity(0.1);
+  }
+
+  100% {
+    filter: opacity(1);
+  }
+}
 /* ===================GLOBAL(MOBILE)=================== */
 
 /* ===================GLOBAL(LARGE)=================== */

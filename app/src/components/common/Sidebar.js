@@ -1,16 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import HoverItem from './HoverItem';
-
+import home from '../../assets/icons/home.png';
+import gallery from '../../assets/icons/gallery.png';
+import skills from '../../assets/icons/skills.png';
+import contact from '../../assets/icons/message.png';
+import about from '../../assets/icons/information.png';
 
 class Sidebar extends React.Component {
-  links = this.props.links;
+  links = [
+    {link:'about', icon: about}, 
+    {link: 'skills', icon: skills}, 
+    {link:'gallery', icon: gallery}, 
+    {link: 'contact', icon: contact},
+    {link: 'home', icon: home}
+  ];
+
   render() {
-    console.log(this.props);
-    
     let key = 0;
     return(
       <ul id='sidebar'>
+        <li className='logo'>
+          Ab Steve
+        </li>
         {this.links.map( display => {
           return(
             <HoverItem key={key += 0.1} color={'white'} link={display} />

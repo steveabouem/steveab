@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 
 class HoverItem extends React.Component {
   constructor(props) {
@@ -27,7 +29,9 @@ class HoverItem extends React.Component {
     return (
       <li className='sidebar-item' onMouseOver={e =>{this.handleMouseOver()}}>
         {!this.state.isHovered ? this.state.content : 
-          <img src={require(this.state.icon)} onMouseOut={this.handleMouseOut} style={{width: '100%', height:'60%', background: `${this.props.color}`}}/>
+          <Link to={'/' + this.state.content}>
+           <img src={this.state.icon} onMouseOut={this.handleMouseOut} />
+          </Link>
         }
       </li>
     )

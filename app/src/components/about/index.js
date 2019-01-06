@@ -1,12 +1,17 @@
 import React from 'react';
+import Sidebar from '../common/Sidebar';
+
 
 class About extends React.Component {
+  
+
   render() {
-    console.log("whre");
-    
     return (
       <div className='page-container'>
-        <h1>About</h1>
+        <Sidebar />
+        <div className='right-side'>
+          <h1>Gallery</h1>
+        </div>
       </div>
     )
   }
